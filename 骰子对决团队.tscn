@@ -1,0 +1,756 @@
+[gd_scene load_steps=13 format=3 uid="uid://6u6p3ojinkxr"]
+
+[ext_resource type="Script" uid="uid://cwke0dl4ljeoh" path="res://骰子对决团队.gd" id="1_5qu70"]
+[ext_resource type="Texture2D" uid="uid://caeldf1578pas" path="res://图片/骰子对决/a2d2690ebe024bbea15b37c0ebd7ee53.jpeg" id="2_xmshj"]
+[ext_resource type="FontFile" uid="uid://tii1w8k7yx0u" path="res://字体/ZCOOLQingKeHuangYou-Regular.ttf" id="3_86fev"]
+[ext_resource type="Texture2D" uid="uid://d0otuvedg45fo" path="res://图片/骰子对决/古戈尔.svg" id="4_6bvfq"]
+[ext_resource type="FontFile" uid="uid://dfyoukjiemx6y" path="res://字体/原神.ttf" id="5_o1bno"]
+[ext_resource type="Texture2D" uid="uid://bbgadq52u0e4s" path="res://图片/骰子对决/幸运星.svg" id="6_hssqh"]
+[ext_resource type="Texture2D" uid="uid://d0puonpbblp03" path="res://图片/骰子对决/王者.svg" id="7_evqgf"]
+[ext_resource type="Texture2D" uid="uid://0hidakyw3sfe" path="res://图片/骰子对决/黄金.svg" id="8_e3o1e"]
+[ext_resource type="Texture2D" uid="uid://dfwu7gk1i6c88" path="res://图片/团队/青铜.svg" id="9_o1bno"]
+
+[sub_resource type="Theme" id="Theme_6bvfq"]
+LineEdit/font_sizes/font_size = 24
+LineEdit/fonts/font = ExtResource("3_86fev")
+
+[sub_resource type="Theme" id="Theme_o1bno"]
+default_font = ExtResource("3_86fev")
+default_font_size = 54
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vwpo6"]
+
+[node name="骰子对决团队" type="Node"]
+script = ExtResource("1_5qu70")
+
+[node name="匹配" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+metadata/_edit_lock_ = true
+
+[node name="标题" type="TextureRect" parent="匹配"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 528.0
+offset_bottom = 208.0
+texture = ExtResource("2_xmshj")
+expand_mode = 1
+
+[node name="辩题" type="Label" parent="匹配/标题"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 128.0
+offset_right = 329.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 50
+text = "团队竞争"
+
+[node name="返回" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 568.0
+offset_right = 216.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "返回"
+
+[node name="团队排名" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 488.0
+offset_right = 216.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "团队排名"
+
+[node name="组团" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 408.0
+offset_right = 216.0
+offset_bottom = 472.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "注册团队"
+
+[node name="随机分组" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "随机分组
+（不计团队分）"
+
+[node name="匹配分组" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 144.0
+offset_right = 1136.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "匹配团队
+"
+
+[node name="强制匹配" type="Button" parent="匹配"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 272.0
+offset_right = 1136.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "强制匹配
+"
+
+[node name="注册团队" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="注册团队"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 576.0
+color = Color(0.3238532, 0.85397696, 0.9999998, 1)
+
+[node name="Panel" type="Panel" parent="注册团队"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1088.0
+offset_bottom = 576.0
+
+[node name="辩题" type="Label" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 584.0
+offset_right = 813.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 50
+text = "注册学习小组"
+
+[node name="加成提示" type="Label" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 176.0
+offset_right = 853.0
+offset_bottom = 226.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 50
+text = "总加成必须为 10 点"
+
+[node name="成员栏" type="VBoxContainer" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 384.0
+offset_bottom = 464.0
+theme_override_constants/separation = 100
+
+[node name="水牌模版" type="Panel" parent="注册团队/Panel/成员栏"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="牌底" type="TextureRect" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 97.0
+texture = ExtResource("4_6bvfq")
+
+[node name="图片" type="Label" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 50
+text = "🎲"
+
+[node name="名字" type="Label" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 2.0
+offset_right = 311.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+theme_override_font_sizes/font_size = 50
+text = "名字"
+vertical_alignment = 1
+
+[node name="标签" type="Label" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 313.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+text = "个性标签"
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 311.0
+offset_bottom = 97.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="注册团队/Panel/成员栏/水牌模版"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 96.0
+flat = true
+
+[node name="水牌模版2" type="Panel" parent="注册团队/Panel/成员栏"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="牌底" type="TextureRect" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 97.0
+texture = ExtResource("6_hssqh")
+
+[node name="图片" type="Label" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 50
+text = "🎲"
+
+[node name="名字" type="Label" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 2.0
+offset_right = 311.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+theme_override_font_sizes/font_size = 50
+text = "名字"
+vertical_alignment = 1
+
+[node name="标签" type="Label" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 313.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+text = "个性标签"
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 311.0
+offset_bottom = 97.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="注册团队/Panel/成员栏/水牌模版2"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 96.0
+flat = true
+
+[node name="水牌模版3" type="Panel" parent="注册团队/Panel/成员栏"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="牌底" type="TextureRect" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 97.0
+texture = ExtResource("7_evqgf")
+
+[node name="图片" type="Label" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 50
+text = "🎲"
+
+[node name="名字" type="Label" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 2.0
+offset_right = 311.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+theme_override_font_sizes/font_size = 50
+text = "名字"
+vertical_alignment = 1
+
+[node name="标签" type="Label" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 313.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+text = "个性标签"
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 311.0
+offset_bottom = 97.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="注册团队/Panel/成员栏/水牌模版3"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 96.0
+flat = true
+
+[node name="水牌模版4" type="Panel" parent="注册团队/Panel/成员栏"]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="牌底" type="TextureRect" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 97.0
+texture = ExtResource("8_e3o1e")
+
+[node name="图片" type="Label" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 50
+text = "🎲"
+
+[node name="名字" type="Label" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 2.0
+offset_right = 311.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+theme_override_font_sizes/font_size = 50
+text = "名字"
+vertical_alignment = 1
+
+[node name="标签" type="Label" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 313.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+text = "个性标签"
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 311.0
+offset_bottom = 97.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="注册团队/Panel/成员栏/水牌模版4"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 96.0
+flat = true
+
+[node name="成员" type="Label" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 376.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "小组成员"
+horizontal_alignment = 1
+
+[node name="输入框" type="LineEdit" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 64.0
+offset_right = 960.0
+offset_bottom = 128.0
+theme = SubResource("Theme_6bvfq")
+placeholder_text = "输入学习小组的名字"
+
+[node name="注册学习小组" type="Button" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 480.0
+offset_right = 792.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "注册"
+
+[node name="生命" type="Panel" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 272.0
+offset_right = 704.0
+offset_bottom = 360.0
+metadata/_edit_group_ = true
+
+[node name="标题" type="Label" parent="注册团队/Panel/生命"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 106.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "生命加成"
+
+[node name="SpinBox" type="SpinBox" parent="注册团队/Panel/生命"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 80.0
+theme = SubResource("Theme_o1bno")
+
+[node name="攻击" type="Panel" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 368.0
+offset_right = 704.0
+offset_bottom = 456.0
+metadata/_edit_group_ = true
+
+[node name="标题" type="Label" parent="注册团队/Panel/攻击"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 106.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "攻击加成"
+
+[node name="SpinBox" type="SpinBox" parent="注册团队/Panel/攻击"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 80.0
+theme = SubResource("Theme_o1bno")
+
+[node name="幸运" type="Panel" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 368.0
+offset_right = 1024.0
+offset_bottom = 456.0
+metadata/_edit_group_ = true
+
+[node name="标题" type="Label" parent="注册团队/Panel/幸运"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 106.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "幸运加成"
+
+[node name="SpinBox" type="SpinBox" parent="注册团队/Panel/幸运"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 80.0
+theme = SubResource("Theme_o1bno")
+
+[node name="防御" type="Panel" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 272.0
+offset_right = 1024.0
+offset_bottom = 360.0
+metadata/_edit_group_ = true
+
+[node name="标题" type="Label" parent="注册团队/Panel/防御"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 106.0
+offset_bottom = 57.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "防御加成"
+
+[node name="SpinBox" type="SpinBox" parent="注册团队/Panel/防御"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 80.0
+theme = SubResource("Theme_o1bno")
+
+[node name="选择" type="Button" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 480.0
+offset_right = 320.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "选择"
+
+[node name="放弃" type="Button" parent="注册团队/Panel"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 8.0
+offset_right = 1016.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "X"
+
+[node name="水牌模版" type="Panel" parent="."]
+offset_left = -760.0
+offset_top = -288.0
+offset_right = -447.0
+offset_bottom = -192.0
+metadata/_edit_group_ = true
+
+[node name="牌底" type="TextureRect" parent="水牌模版"]
+layout_mode = 0
+offset_right = 313.0
+offset_bottom = 97.0
+texture = SubResource("CompressedTexture2D_vwpo6")
+
+[node name="图片" type="Label" parent="水牌模版"]
+layout_mode = 0
+offset_right = 63.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 50
+text = "🎲"
+
+[node name="名字" type="Label" parent="水牌模版"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 2.0
+offset_right = 311.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+theme_override_font_sizes/font_size = 50
+text = "名字"
+vertical_alignment = 1
+
+[node name="标签" type="Label" parent="水牌模版"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 70.0
+offset_right = 313.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("5_o1bno")
+text = "个性标签"
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="水牌模版"]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 311.0
+offset_bottom = 97.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="水牌模版"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 96.0
+flat = true
+
+[node name="强制匹配" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1592.0
+offset_top = -624.0
+offset_right = -856.0
+offset_bottom = -112.0
+metadata/_edit_group_ = true
+
+[node name="Panel" type="Panel" parent="强制匹配"]
+layout_mode = 0
+offset_right = 736.0
+offset_bottom = 512.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="强制匹配/Panel"]
+layout_mode = 0
+offset_left = 56.0
+offset_right = 696.0
+offset_bottom = 448.0
+
+[node name="展示栏" type="GridContainer" parent="强制匹配/Panel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 320
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="完成" type="Button" parent="强制匹配/Panel"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 456.0
+offset_right = 552.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "完成成员选择"
+
+[node name="一键清空" type="Button" parent="强制匹配/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 456.0
+offset_right = 168.0
+offset_bottom = 504.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 32
+text = "一键清空"
+
+[node name="学习小组模版" type="Panel" parent="."]
+offset_left = -720.0
+offset_top = -672.0
+offset_right = -56.0
+offset_bottom = -424.0
+
+[node name="学习小组背景" type="TextureRect" parent="学习小组模版"]
+layout_mode = 0
+offset_right = 664.0
+offset_bottom = 248.0
+texture = ExtResource("9_o1bno")
+
+[node name="成员栏" type="GridContainer" parent="学习小组模版"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 648.0
+offset_bottom = 240.0
+theme_override_constants/h_separation = 315
+theme_override_constants/v_separation = 100
+columns = 2
+metadata/_edit_group_ = true
+
+[node name="名字" type="Label" parent="学习小组模版"]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 528.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 30
+text = "孙晨曦的小组"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="颜色" type="ColorRect" parent="学习小组模版"]
+layout_mode = 0
+offset_right = 664.0
+offset_bottom = 248.0
+color = Color(1, 1, 1, 0)
+
+[node name="点击框" type="Button" parent="学习小组模版"]
+layout_mode = 0
+offset_right = 664.0
+offset_bottom = 248.0
+flat = true
+
+[node name="排行榜" type="Panel" parent="."]
+offset_top = -648.0
+offset_right = 1152.0
+
+[node name="返回键" type="Button" parent="排行榜"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 584.0
+offset_right = 256.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "返回"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="排行榜"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 144.0
+offset_right = 1136.0
+offset_bottom = 576.0
+
+[node name="展示框" type="GridContainer" parent="排行榜/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 664
+theme_override_constants/v_separation = 248
+
+[node name="导入按钮" type="Button" parent="排行榜"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "导入存档"
+
+[node name="毁档" type="Button" parent="排行榜"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 16.0
+offset_right = 1088.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "毁灭存档"
+
+[node name="氪金" type="Button" parent="排行榜"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 80.0
+offset_right = 1088.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "氪金"
+
+[node name="导出按钮" type="Button" parent="排行榜"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 256.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "导出存档"
+
+[node name="详情" type="Label" parent="排行榜"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 584.0
+offset_right = 1136.0
+offset_bottom = 640.0
+theme_override_fonts/font = ExtResource("3_86fev")
+theme_override_font_sizes/font_size = 24
+text = "这里显示详情"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="匹配/返回" to="." method="_on_返回_pressed"]
+[connection signal="pressed" from="匹配/团队排名" to="." method="_on_团队排名_pressed"]
+[connection signal="pressed" from="匹配/组团" to="." method="_on_组团_pressed"]
+[connection signal="pressed" from="注册团队/Panel/成员栏/水牌模版/点击框" to="注册团队/Panel/成员栏/水牌模版" method="_on_点击框_pressed"]
+[connection signal="pressed" from="注册团队/Panel/成员栏/水牌模版2/点击框" to="注册团队/Panel/成员栏/水牌模版2" method="_on_点击框_pressed"]
+[connection signal="pressed" from="注册团队/Panel/成员栏/水牌模版3/点击框" to="注册团队/Panel/成员栏/水牌模版3" method="_on_点击框_pressed"]
+[connection signal="pressed" from="注册团队/Panel/成员栏/水牌模版4/点击框" to="注册团队/Panel/成员栏/水牌模版4" method="_on_点击框_pressed"]
+[connection signal="pressed" from="注册团队/Panel/注册学习小组" to="." method="_on_注册学习小组_pressed"]
+[connection signal="pressed" from="注册团队/Panel/选择" to="." method="_on_选择_pressed"]
+[connection signal="pressed" from="注册团队/Panel/放弃" to="." method="_on_放弃_pressed"]
+[connection signal="pressed" from="水牌模版/点击框" to="水牌模版" method="_on_点击框_pressed"]
+[connection signal="pressed" from="强制匹配/Panel/完成" to="." method="_on_完成_pressed"]
+[connection signal="pressed" from="排行榜/返回键" to="." method="_on_返回键_pressed"]

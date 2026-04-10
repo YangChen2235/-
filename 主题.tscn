@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfvaya2kd27ul"]
+
+[ext_resource type="Texture2D" uid="uid://di3td30hc3acx" path="res://图片/抽卡.png" id="1_cfyvh"]
+[ext_resource type="FontFile" uid="uid://trwruxk8o5hq" path="res://字体/STXINGKA.TTF" id="1_tunxn"]
+[ext_resource type="Texture2D" uid="uid://c42s20fb7nf2l" path="res://图片/骰子.png" id="2_wxy07"]
+
+[node name="主题" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 652.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 21.0
+offset_right = 1106.0
+offset_bottom = 622.0
+
+[node name="抽卡" type="Button" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 139.0
+offset_right = 290.0
+offset_bottom = 339.0
+icon = ExtResource("1_cfyvh")
+icon_alignment = 1
+expand_icon = true
+
+[node name="骰子" type="Button" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 142.0
+offset_right = 529.0
+offset_bottom = 342.0
+icon = ExtResource("2_wxy07")
+icon_alignment = 1
+expand_icon = true
+
+[node name="标题" type="Label" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 23.0
+offset_right = 598.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("1_tunxn")
+theme_override_font_sizes/font_size = 64
+text = "主题"
+horizontal_alignment = 1
+vertical_alignment = 1

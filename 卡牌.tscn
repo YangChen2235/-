@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://jswr3o11outw"]
+
+[ext_resource type="Script" uid="uid://dhhsifarqy74l" path="res://卡牌.gd" id="1_4fv0l"]
+[ext_resource type="Texture2D" uid="uid://dri5j3ca837th" path="res://图片/一星.svg" id="2_ccxm3"]
+[ext_resource type="FontFile" uid="uid://dfyoukjiemx6y" path="res://字体/原神.ttf" id="2_rnyy6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 155.0
+offset_bottom = 238.0
+pivot_offset = Vector2(77.5, 119)
+script = ExtResource("1_4fv0l")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 154.0
+offset_bottom = 238.0
+
+[node name="图片" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -10.0
+offset_right = 173.0
+offset_bottom = 257.0
+texture = ExtResource("2_ccxm3")
+
+[node name="名字" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 154.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_rnyy6")
+theme_override_font_sizes/font_size = 40
+text = "名字"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 160.0
+offset_bottom = 248.0
