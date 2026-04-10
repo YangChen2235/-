@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfau3nv6fipis"]
+
+[ext_resource type="Script" uid="uid://dsiaebqldyco1" path="res://立绘.gd" id="1_8usm2"]
+[ext_resource type="Texture2D" uid="uid://c1tr2k16ciij7" path="res://图片/水元素.png" id="2_8usm2"]
+[ext_resource type="FontFile" uid="uid://dfyoukjiemx6y" path="res://字体/原神.ttf" id="2_au1oy"]
+[ext_resource type="Texture2D" uid="uid://cj8ounloue72j" path="res://图片/立绘背景.svg" id="2_khc2j"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_8usm2")
+
+[node name="背景" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("2_khc2j")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1155.0
+offset_bottom = 651.0
+
+[node name="名字" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 392.0
+offset_right = 333.0
+offset_bottom = 489.0
+theme_override_fonts/font = ExtResource("2_au1oy")
+theme_override_font_sizes/font_size = 64
+text = "名字"
+vertical_alignment = 1
+
+[node name="立绘" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 53.0
+offset_right = 1034.0
+offset_bottom = 564.0
+
+[node name="简介" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 475.0
+offset_right = 524.0
+offset_bottom = 603.0
+theme_override_fonts/normal_font = ExtResource("2_au1oy")
+text = "简介"
+autowrap_mode = 1
+
+[node name="元素" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 400.0
+offset_right = 146.0
+offset_bottom = 475.0
+texture = ExtResource("2_8usm2")
+expand_mode = 1
+
+[node name="下一个" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 651.0
+flat = true
+
+[connection signal="pressed" from="Panel/下一个" to="." method="_on_button_pressed"]

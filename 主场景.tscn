@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://qri1phj2biau"]
+
+[ext_resource type="Script" uid="uid://64shvp1e4xll" path="res://主场景.gd" id="1_ynihe"]
+[ext_resource type="FontFile" uid="uid://dfyoukjiemx6y" path="res://字体/原神.ttf" id="2_abbb7"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_ynihe")
+
+[node name="骰子对决" type="Button" parent="."]
+offset_left = 201.0
+offset_top = 577.0
+offset_right = 330.0
+offset_bottom = 626.0
+text = "骰子对决
+"
+
+[node name="抽取一次" type="Button" parent="."]
+offset_left = 615.0
+offset_top = 575.0
+offset_right = 747.0
+offset_bottom = 629.0
+text = "抽取一次"
+
+[node name="抽取十次" type="Button" parent="."]
+offset_left = 763.0
+offset_top = 575.0
+offset_right = 895.0
+offset_bottom = 629.0
+text = "抽取十次"
+
+[node name="自定义抽取" type="Button" parent="."]
+offset_left = 914.0
+offset_top = 575.0
+offset_right = 1046.0
+offset_bottom = 629.0
+text = "自定义抽取"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 57.0
+offset_top = 47.0
+offset_right = 1063.0
+offset_bottom = 563.0
+
+[node name="抽取结果" type="HFlowContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 3.0
+offset_right = 826.0
+offset_bottom = 517.0
+theme_override_constants/h_separation = 175
+theme_override_constants/v_separation = 260
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 1007.0
+offset_bottom = 512.0
+
+[node name="抽取详情" type="Button" parent="."]
+offset_left = 62.0
+offset_top = 576.0
+offset_right = 192.0
+offset_bottom = 626.0
+text = "抽取详情"
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 649.0
+offset_right = 1153.0
+offset_bottom = 1290.0
+
+[node name="返回" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 18.0
+offset_right = 189.0
+offset_bottom = 68.0
+text = "返回"
+
+[node name="详情" type="RichTextLabel" parent="Panel2"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 84.0
+offset_right = 250.0
+offset_bottom = 608.0
+theme_override_fonts/normal_font = ExtResource("2_abbb7")
+
+[node name="摄像机" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="启用动画" type="CheckButton" parent="."]
+offset_right = 44.0
+offset_bottom = 24.0
+text = "启用动画"
+
+[connection signal="pressed" from="骰子对决" to="." method="_on_骰子对决_pressed"]
+[connection signal="pressed" from="抽取一次" to="." method="_on_抽取一次_pressed"]
+[connection signal="pressed" from="抽取十次" to="." method="_on_抽取十次_pressed"]
+[connection signal="pressed" from="自定义抽取" to="." method="_on_自定义抽取_pressed"]
+[connection signal="pressed" from="抽取详情" to="." method="_on_抽取详情_pressed"]
+[connection signal="pressed" from="Panel2/返回" to="." method="_on_返回_pressed"]
+[connection signal="pressed" from="启用动画" to="." method="_on_启用动画_pressed"]
